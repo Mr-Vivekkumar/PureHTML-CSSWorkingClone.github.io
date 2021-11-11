@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        *{
+        * {
             padding: 0%;
             margin: 0%;
             box-sizing: border-box;
         }
 
-        :root{
-            --dark-rgb: 33,37,41;
-            --font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        :root {
+            --dark-rgb: 33, 37, 41;
+            --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             --body-font-size: 1rem;
             --body-font-weight: 400;
             --body-line-height: 1.5;
@@ -22,7 +23,7 @@
         }
 
 
-        body{
+        body {
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: transparent;
             margin: 0;
@@ -31,10 +32,11 @@
             font-weight: var(--body-font-weight);
             line-height: var(--body-line-height);
             color: var(--body-color);
-            background-color: var(--body-bg);
+            /* background-color: var(--body-bg); */
+            background-image: url(https://img.freepik.com/free-photo/starry-night-sky_1048-11828.jpg?size=626&ext=jpg);
         }
 
-        .container{
+        .container {
             width: 100%;
             padding-right: .75rem;
             padding-left: .75rem;
@@ -42,7 +44,7 @@
             margin-left: auto;
         }
 
-        ul{
+        ul {
             margin-block-start: 1em;
             margin-block-end: 1em;
             margin-inline-start: 0px;
@@ -50,8 +52,8 @@
             padding-inline-start: 40px;
         }
 
-        .nav-bar{
-            margin: 1rem!important;
+        .nav-bar {
+            margin: 1rem !important;
             display: flex;
             flex-wrap: wrap;
             padding-left: 0;
@@ -64,25 +66,26 @@
             text-align: -webkit-match-parent;
         }
 
-        .div-right{
-            margin-left: auto!important;
+        .div-right {
+            margin-left: auto !important;
         }
 
         .nav-bar .nav .link {
             --bs-text-opacity: 1;
-            color: rgba(var(--dark-rgb))!important;
+            /* color: rgba(var(--dark-rgb)) !important; */
+            color: #fff;
             display: block;
             padding: 0.5rem 1rem;
             text-decoration: none;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
         }
 
-        svg{
+        svg {
             vertical-align: middle;
 
         }
 
-        .Sign-in-button{
+        .Sign-in-button {
             color: #fff;
             background-color: #0d6efd;
             border-color: #0d6efd;
@@ -98,29 +101,48 @@
             padding: 0.375rem 0.75rem;
             font-size: 1rem;
             border-radius: 0.25rem;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
 
-        .Sign-in-button:hover{
+        .form-button {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .Sign-in-button:hover {
             color: #000;
             background-color: #d70b0b;
             border-color: #d70b0b;
         }
 
-        .main-content{
-            text-align: center!important;
+        .main-content {
+            text-align: center !important;
         }
 
-        img{
+        img {
             vertical-align: middle;
-            width: 25%!important;
+            width: 25% !important;
             max-width: 100%;
             height: auto;
 
         }
 
-        form{
-            margin-top: 1.5rem!important;
+        form {
+            margin-top: 1.5rem !important;
         }
 
         input {
@@ -128,7 +150,7 @@
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
-            -webkit-writing-mode: horizontal-tb!important;
+            -webkit-writing-mode: horizontal-tb !important;
             text-rendering: auto;
             color: -internal-light-dark(black, white);
             letter-spacing: normal;
@@ -152,13 +174,13 @@
         }
 
 
-        #search-bar{
+        #search-bar {
             border-radius: 25px;
             border-color: lightskyblue;
-            margin-bottom: 1.5rem!important;
-            margin-right: auto!important;
-            margin-left: auto!important;
-            width: 50%!important;
+            margin-bottom: 1.5rem !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            width: 50% !important;
             min-height: calc(1.5em + 1rem + 2px);
             padding: 0.5rem 1rem;
             font-size: 1.25rem;
@@ -169,11 +191,11 @@
             background-color: #fff;
             background-clip: padding-box;
             border: 1pxsolid #ced4da;
-            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             appearance: none;
         }
 
-        button{
+        button {
             color: #000;
             background-color: #f8f9fa;
             border-color: #f8f9fa;
@@ -188,13 +210,12 @@
             padding: 0.375rem 0.75rem;
             font-size: 1rem;
             border-radius: 0.25rem;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
-        
-        .form-button{
+
+        a.form-button {
             color: #fff;
             background-color: #0d6efd;
-            border-color: #0d6efd;
+            border-color: transparent;
             display: inline-block;
             font-weight: 400;
             line-height: 1.5;
@@ -203,11 +224,10 @@
             vertical-align: middle;
             cursor: pointer;
             user-select: none;
-            border: 1px solid transparent;
-            padding: 0.375rem 0.75rem;
+            border: 1 px solid transparent;
+            padding: 0.375 rem 0.75 rem;
             font-size: 1rem;
-            border-radius: 0.25rem;
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            border-radius: 0.25 rem;
         }
 
         /* .left {
@@ -236,6 +256,7 @@
     </style>
     <title>Clone</title>
 </head>
+
 <body>
     <div class="container">
         <ul class="nav-bar">
@@ -253,8 +274,10 @@
             </li>
             <li class="nav">
                 <a class="link" href="https://accounts.google.com/ServiceLogin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
                     </svg>
                 </a>
             </li>
@@ -264,12 +287,16 @@
         </ul>
 
         <div class="main-content">
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" alt="Google-Logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png"
+                alt="Google-Logo">
 
-            <form action="https://www.google.com/search"  method="get">
-                <input id="search-bar" name="q" type="search" placeholder="Search Google or type URL" autocomplete="off" autofocus  >
-                <button type="submit" class="form-button" >Google Search</button>
-                <button type="submit"><a herf"https://www.google.com/doodles" role="button" class="form-button">I'm Feeling Lucky</a></button>
+            <form action="https://www.google.com/search" method="get">
+                <input id="search-bar" name="q" type="search" placeholder="Search Google or type URL" autocomplete="off"
+                    autofocus>
+                <button type="submit" class="form-button">Google Search</button>
+                <button type="submit" class="form-button">
+                    <a href="https://www.google.com/doodles" role="button" style="text-decoration: none; color: #fff;" >I'm Feeling Lucky</a>
+                </button>
             </form>
         </div>
     </div>
@@ -284,6 +311,7 @@
         </ul>
         
     </footer> -->
-    
+
 </body>
+
 </html>
